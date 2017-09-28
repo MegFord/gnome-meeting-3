@@ -78,6 +78,7 @@
                                     <li><img src="assets/images/gnome-music.png"/><a class="https" href="https://bugzilla.gnome.org/buglist.cgi?product=gnome-music&amp;keywords=newcomers&amp;resolution=---">Bugs in Music</a></li>
                                     <li><img src="assets/images/gnome-todo.png" /> <a class="https" href="https://bugzilla.gnome.org/buglist.cgi?product=gnome-todo&amp;keywords=newcomers&amp;resolution=---">Bugs in ToDo</a></li>
                                     <li><img src="assets/images/gnome-maps.png" /> <a class="https" href="https://bugzilla.gnome.org/buglist.cgi?product=gnome-maps&amp;keywords=newcomers&amp;resolution=---">Bugs in Maps</a></li></ul>
+                                </br>
                                 <h3 class="level-title">Choose a bug from the list for your App</h3>
                                     <div class="featured-image">
                                     <img class="img-responsive project-image" src="assets/images/find-bug-in-list.jpg" alt="Find bug in list" />
@@ -89,23 +90,22 @@
                                     <img class="img-responsive project-image" src="assets/images/how-to-read-bugs.jpg" alt="How to read bug" />
                                     </div>
                                 </br>
-                                <h3 class="level-title">If you run into some code or something in the bug report you don't understand, use these troubleshooting steps to find the answer</h3>
-                                    <ol>
-                                        <li>Use the documentation in <a href="https://developer.gnome.org/search">GNOME Developer Center</a> to look up words unfamiliar to you</li>
-                                        <li>Look at your application's project home page (found in <a href="https://docs.google.com/presentation/d/1OQ4VXGSAxeo7Wvbp3BRd37AbpTLuReAbcUcbceNbdXU/edit?usp=sharing">the slides for Activity 1</a></li>
-                                        <li>Ask questions in the GNOME chatrooms
-                                            <ul><li>Questions related to GTK+ in the <a href="https://riot.im/app/#/room/#_gimpnet_#gtk+:matrix.org">#gtk+</a> chatroom</a></li>
-                                            <li>Questions about the newcomer guide in the <a href="https://riot.im/app/#/room/#_gimpnet_#newcomers+:matrix.org">#newcomers</a> chatroom</li>
-                                            <li>Questions about your project in your project's chatroom (found in the <a href="https://docs.google.com/presentation/d/1OQ4VXGSAxeo7Wvbp3BRd37AbpTLuReAbcUcbceNbdXU/edit?usp=sharing">slides for Activity 1</a>)</li></li>
-                                        <li>If you are unsure what the problem is or run into trouble, comment on the bug to get advice</li>
-                                    </ol>
                                 <h3 class="level-title">There are several types of bugs</h3>
                                     <ol><li>If your bug contains reproduction steps, try to reproduce it</li>
                                         <li>If your bug contains a description or a design, try to identify which part of the UI it concerns</li>
-                                        <li>If someone else already submitted code to the bug recently, you can help by <a href="/PatchSquad/PreliminaryPatchReview">reviewing the code</a></li>
-                                        <li>If you are unsure what the problem is or run into trouble, follow the troubleshooting steps listed above</li>
+                                        <li>If someone else already submitted code to the bug recently, you can help by <a href="https://wiki.gnome.org/PatchSquad/PreliminaryPatchReview">reviewing the code</a></li>
                                     </ol>
                                 </br>
+                                <h3 class="level-title">If you run into some code or something in the bug report you don't understand, use these troubleshooting steps to find the answer:</h3>
+                                    <ol>
+                                        <li>Use the documentation in <a href="https://developer.gnome.org/search">GNOME Developer Center</a> to look up words unfamiliar to you</li>
+                                        <li>Look at your application's project home page found in <a href="https://docs.google.com/presentation/d/1OQ4VXGSAxeo7Wvbp3BRd37AbpTLuReAbcUcbceNbdXU/edit?usp=sharing">the slides for Activity 1</a></li>
+                                        <li>Ask questions in the GNOME chatrooms
+                                            <ul><li>Questions related to GTK+ in the <a href="https://riot.im/app/#/room/#_gimpnet_#gtk+:matrix.org">#gtk+</a> chatroom</a></li>
+                                            <li>Questions about the newcomer guide in the <a href="https://riot.im/app/#/room/#_gimpnet_#newcomers+:matrix.org">#newcomers</a> chatroom</li>
+                                            <li>Questions about your project in your project's chatroom found in the <a href="https://docs.google.com/presentation/d/1OQ4VXGSAxeo7Wvbp3BRd37AbpTLuReAbcUcbceNbdXU/edit?usp=sharing">slides for Activity 1</a></li></li>
+                                        <li>If you are unsure what the problem is or run into trouble, comment on the bug to get advice</li>
+                                    </ol>
                             </div><!--//item-->
                         </div><!--//content-->
                     </div><!--//section-inner-->
@@ -119,7 +119,7 @@
                                 <p>GtkInspector is the built-in interactive debugging support in GTK+.</p>
                                 <p>The debugger is disabled by default. To enable it run in a terminal:</p>
                                 <ul style="list-style-type:none">
-                                    <li>gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true</li>
+                                    <li><i><b>gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true</i></b></li>
                                 </ul>
                                 <p>And launch it pressing on the keyboard Control-Shift-I or Control-Shift-D.</p>
                                 <p>All GNOME apps are object-oriented. Your task will typically require you to fix the behavior of one or more objects. GTK+ Inspector lets you point and click to inspect any GTK+ object visible in the interface. Inspection can help you find the object's class or change its margin and other properties.</p>
@@ -137,7 +137,7 @@
                                 <p>For all newcomer apps, the code is located inside the /src/ folder of your project. UI files are usually located inside the /data/ folder.</p>
                                 <p>The command git grep can help you to locate the object's class in the project code. Open a terminal and change directory to the project folder. Then you can search for Gtk.label by typing:</p>
                                 <ul style="list-style-type:none">
-                                    <li>git grep "Gtk.Label"</li>
+                                    <li><i><b>git grep "Gtk.Label"</b></i></li>
                                 </ul>
                                 <p>The output is a list of files containing the string Gtk.Label. Read the source code in the files to see if the object's class is there.</p>
                             </div><!--//item-->
